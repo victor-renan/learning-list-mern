@@ -11,7 +11,7 @@ const routes_1 = __importDefault(require("./routes"));
 const app = (0, express_1.default)();
 // Define a porta como 8000
 const PORT = process.env.PORT || 8000;
-//
+//Usa rotas externas
 app.use((0, cors_1.default)());
 app.use(routes_1.default);
 const uri = `mongodb+srv://${process.env.MONGO_USER}:

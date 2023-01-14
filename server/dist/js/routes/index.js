@@ -9,8 +9,8 @@ router.get("/materias", subjects_1.getSubjects);
 // Rota que adiciona uma materia
 router.post("/materias/adicionar", subjects_1.addSubject);
 // Rota que atualiza uma materia pelo id
-router.put("/materias/edit/:id", subjects_1.updateSubject);
+router.put("/materias/atualizar/:id", subjects_1.updateSubject);
 // Rota que deleta uma materia pelo id
-router.delete("/materias/delete/:id", subjects_1.getSubjects);
+router.delete("/materias/deletar/:id", subjects_1.getSubjects);
 // Exporta o Roteador
 exports.default = router;

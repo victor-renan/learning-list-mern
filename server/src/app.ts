@@ -9,7 +9,9 @@ const app: Express = express();
 // Define a porta como 8000
 const PORT: string | number = process.env.PORT || 8000;
 
-//
+
+
+//Usa rotas externas
 app.use(cors());
 app.use(subjectRoutes);
 

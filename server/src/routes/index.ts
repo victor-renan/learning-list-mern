@@ -11,10 +11,10 @@ router.get("/materias", getSubjects);
 router.post("/materias/adicionar", addSubject);
 
 // Rota que atualiza uma materia pelo id
-router.put("/materias/edit/:id", updateSubject);
+router.put("/materias/atualizar/:id", updateSubject);
 
 // Rota que deleta uma materia pelo id
-router.delete("/materias/delete/:id", getSubjects);
+router.delete("/materias/deletar/:id", getSubjects);
 
 
 // Exporta o Roteador
