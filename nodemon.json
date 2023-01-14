@@ -1,0 +1,7 @@
+{
+    "env": {
+        "MONGO_USER": "victor-renan",
+        "MONGO_PASSWORD": "Renan%23717377%23",
+        "MONGO_DB": "github-learning-list"
+    }
+}
