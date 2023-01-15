@@ -12,7 +12,7 @@ const subjectSchema: Schema = new Schema (
             required: true
         },
         completion: {
-            type: Date,
+            type: String,
             required: true
         },
         status: {

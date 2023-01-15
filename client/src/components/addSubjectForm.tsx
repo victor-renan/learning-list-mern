@@ -16,21 +16,21 @@ const AddSubject: React.FC<Props> = ({ saveSubject }) => {
 
   return (
     <form className='new-subject-form' onSubmit={(e) => saveSubject(e, formData)}>
-      <div>
         <div>
-          <label htmlFor='name'>Name:</label>
+          <label htmlFor='name'>Nome da matéria:</label>
           <input onChange={handleForm} type='text' name='name' id='name' />
         </div>
         <div>
-          <label htmlFor='description'>Description:</label>
+          <label htmlFor='description'>Descrição:</label>
           <input onChange={handleForm} type='text' name='description' id='description' />
         </div>
         <div>
-          <label htmlFor='completion'>Completion:</label>
+          <label htmlFor='completion'>Data de finalização:</label>
           <input onChange={handleForm} type='text' name='completion' id='completion' />
         </div>
-      </div>
-      <button>Adicionar</button>
+        <div>
+          <button>Adicionar</button>
+        </div>
     </form>
   )
 }

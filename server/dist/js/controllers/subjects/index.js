@@ -96,13 +96,13 @@ function deleteSubject(req, res) {
         // Tenta deletar a materia pelo id
         try {
             // Seleciona a materia pelo id
-            const deletedSubject = yield subject_1.default.findByIdAndRemove(req.params.id);
+            const deletedSubject = yield subject_1.default.findByIdAndDelete(req.params.id);
             // Pega todas as materias
             const allSubjects = yield subject_1.default.find();
             // Retorna os dados coletados
             res.status(200).json({
                 message: "Materia deletada.",
-                subject: deleteSubject,
+                subject: deletedSubject,
                 subjects: allSubjects
             });
         }

@@ -11,7 +11,7 @@ const subjectSchema = new mongoose_1.Schema({
         required: true
     },
     completion: {
-        type: Date,
+        type: String,
         required: true
     },
     status: {

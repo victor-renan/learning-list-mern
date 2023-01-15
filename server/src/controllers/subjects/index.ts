@@ -85,17 +85,16 @@ async function deleteSubject(req: Request, res: Response): Promise<void> {
     // Tenta deletar a materia pelo id
     try {
         // Seleciona a materia pelo id
-        const deletedSubject: ISubject | null = await SubjectSchema.findByIdAndRemove(
+        const deletedSubject: ISubject | null = await SubjectSchema.findByIdAndDelete(
             req.params.id
         );
-        
         // Pega todas as materias
         const allSubjects: ISubject[] = await SubjectSchema.find();
 
         // Retorna os dados coletados
         res.status(200).json({
             message: "Materia deletada.",
-            subject: deleteSubject,
+            subject: deletedSubject,
             subjects: allSubjects
         });
 
@@ -104,4 +103,4 @@ async function deleteSubject(req: Request, res: Response): Promise<void> {
     };
 };
 
-export { getSubjects, addSubject, updateSubject, deleteSubject}
+export { getSubjects, addSubject, updateSubject, deleteSubject }

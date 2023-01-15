@@ -14,7 +14,7 @@ router.post("/materias/adicionar", addSubject);
 router.put("/materias/atualizar/:id", updateSubject);
 
 // Rota que deleta uma materia pelo id
-router.delete("/materias/deletar/:id", getSubjects);
+router.delete("/materias/deletar/:id", deleteSubject);
 
 
 // Exporta o Roteador

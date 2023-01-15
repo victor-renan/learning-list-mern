@@ -53,7 +53,7 @@ export async function updateSubject(subject: ISubject): Promise <AxiosResponse<A
 
         // Atualiza a materia
         const updatedSubject: AxiosResponse<ApiDataType> = await axios.put(
-            `${baseUrl}/materias/update/${subject._id}`,
+            `${baseUrl}/materias/atualizar/${subject._id}`,
             subjectUpdate
         );
 
@@ -70,7 +70,7 @@ export async function updateSubject(subject: ISubject): Promise <AxiosResponse<A
 export async function deleteSubject(_id: string): Promise<AxiosResponse<ApiDataType>> {
     try {
         const deletedSubject: AxiosResponse<ApiDataType> = await axios.delete(
-            `${baseUrl}/materias/delete/${_id}`
+            `${baseUrl}/materias/deletar/${_id}`
         );
         // Retorna o Fetch
         return deletedSubject;

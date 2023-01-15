@@ -2,6 +2,7 @@ import express, { Express } from "express";
 import mongoose from "mongoose";
 import cors from "cors";
 import subjectRoutes from "./routes"
+import bodyParser from "body-parser";
 
 // Chama o express
 const app: Express = express();
@@ -9,6 +10,9 @@ const app: Express = express();
 // Define a porta como 8000
 const PORT: string | number = process.env.PORT || 8000;
 
+
+app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({extended: false}))
 
 
 //Usa rotas externas

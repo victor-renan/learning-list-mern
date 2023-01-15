@@ -7,10 +7,13 @@ const express_1 = __importDefault(require("express"));
 const mongoose_1 = __importDefault(require("mongoose"));
 const cors_1 = __importDefault(require("cors"));
 const routes_1 = __importDefault(require("./routes"));
+const body_parser_1 = __importDefault(require("body-parser"));
 // Chama o express
 const app = (0, express_1.default)();
 // Define a porta como 8000
 const PORT = process.env.PORT || 8000;
+app.use(body_parser_1.default.json());
+app.use(body_parser_1.default.urlencoded({ extended: false }));
 //Usa rotas externas
 app.use((0, cors_1.default)());
 app.use(routes_1.default);
